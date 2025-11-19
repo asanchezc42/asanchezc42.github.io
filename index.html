@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Word</title>
+
+    <!-- IMPORTANTE: el nombre debe coincidir EXACTO con tu archivo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,16 +17,15 @@
 
         <div class="buttons">
             <button onclick="mostrarResultado('palabras')">Contar Palabras</button>
-            <button onclick="mostrarResultado('signos')">Signos de Puntuación</button>
-            <button onclick="mostrarResultado('vocales')">Contar Vocales</button>
-            <button onclick="mostrarResultado('consonantes')">Contar Consonantes</button>
-            <button onclick="mostrarResultado('digitos')">Contar Dígitos</button>
-            <button onclick="mostrarResultado('mayusculas')">Palabras Mayúscula</button>
-            <button onclick="mostrarResultado('minusculas')">Palabras Minúscula</button>
-            <button onclick="mostrarResultado('parrafos')">Contar Párrafos</button>
-            <button onclick="mostrarResultado('invertir')">Invertir Texto</button>
-            <button onclick="mostrarResultado('caracteres')">Total Caracteres</button>
-
+            <button onclick="mostrarResultado('signos')">Signos</button>
+            <button onclick="mostrarResultado('vocales')">Vocales</button>
+            <button onclick="mostrarResultado('consonantes')">Consonantes</button>
+            <button onclick="mostrarResultado('digitos')">Dígitos</button>
+            <button onclick="mostrarResultado('mayusculas')">Mayúsculas</button>
+            <button onclick="mostrarResultado('minusculas')">Minúsculas</button>
+            <button onclick="mostrarResultado('parrafos')">Párrafos</button>
+            <button onclick="mostrarResultado('invertir')">Invertir</button>
+            <button onclick="mostrarResultado('caracteres')">Caracteres</button>
             <button onclick="buscarPalabraUsuario()">Buscar Palabra</button>
             <button onclick="contarCaracterUsuario()">Contar Carácter</button>
             <button onclick="mostrarResultado('pares')">Posiciones Pares</button>
@@ -32,9 +33,4 @@
             <button onclick="agregarTextoUsuario()">Agregar Texto</button>
         </div>
 
-        <div id="resultado" class="resultado"></div>
-    </div>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <div id="res
