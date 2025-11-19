@@ -1,4 +1,69 @@
 // ===============================================
+// CONTROLADOR PRINCIPAL PARA MOSTRAR RESULTADOS
+// ===============================================
+function mostrarResultado(accion) {
+    let texto = document.getElementById("texto").value;
+    let resDiv = document.getElementById("res");
+    let resultado = "";
+
+    switch (accion) {
+
+        case "palabras":
+            resultado = "Total de palabras: " + contarPalabras(texto);
+            break;
+
+        case "signos":
+            resultado = "Signos de puntuación: " + contarSignos(texto);
+            break;
+
+        case "vocales":
+            resultado = "Vocales: " + contarVocales(texto);
+            break;
+
+        case "consonantes":
+            resultado = "Consonantes: " + contarConsonantes(texto);
+            break;
+
+        case "digitos":
+            resultado = "Dígitos: " + contarDigitos(texto);
+            break;
+
+        case "mayusculas":
+            resultado = "Palabras que empiezan en MAYÚSCULA: " + palabrasMayuscula(texto);
+            break;
+
+        case "minusculas":
+            resultado = "Palabras que empiezan en minúscula: " + palabrasMinuscula(texto);
+            break;
+
+        case "parrafos":
+            resultado = "Párrafos: " + contarParrafos(texto);
+            break;
+
+        case "invertir":
+            resultado = "Invertido: " + invertirTexto(texto);
+            break;
+
+        case "caracteres":
+            resultado = "Total caracteres: " + totalCaracteres(texto);
+            break;
+
+        case "pares":
+            resultado = "Caracteres en posiciones PARES: " + contarPares(texto);
+            break;
+
+        case "impares":
+            resultado = "Caracteres en posiciones IMPARES: " + contarImpares(texto);
+            break;
+
+        default:
+            resultado = "Acción no reconocida.";
+    }
+
+    resDiv.innerHTML = resultado;
+}
+
+// ===============================================
 // 1. CONTAR PALABRAS
 // ===============================================
 function contarPalabras(texto) {
@@ -172,3 +237,4 @@ function agregarTexto(texto, fragmento) {
     let alFinal = texto + " " + fragmento;
     return { inicio: alInicio, final: alFinal };
 }
+
