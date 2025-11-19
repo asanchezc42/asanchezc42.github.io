@@ -22,32 +22,37 @@ body {
 
 h1 {
     color: #7a2f8f; /* Color de texto del encabezado */
-    text-align: center;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 #texto {
-    width: 100%;
-    height: 200px;
-    padding: 12px;
-    font-size: 15px;
-    border: 2px solid #d6b3ff;
     border-radius: 10px;
+    border: 2px solid #d6b3ff;
+    font-size: 15px;
+    height: 200px;
+    width: 100%;
     outline: none;
+    padding: 12px;
     resize: vertical;
 }
 
+#texto:focus {
+    background: #f8eaff;
+    border-color: #a46bee;
+}
+
 .buttons {
-    margin-top: 18px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
     gap: 12px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    margin-top: 18px;
 }
 
 .buttons button {
-    background: #a46bee; /* Color de los botones */
-    color: white;
+    background: #a46bee; /* Color de fondo de los botones */
     border: none;
+    color: white; /* Color de letra de los botones */
     padding: 10px;
     font-weight: 600;
     border-radius: 8px;
@@ -56,19 +61,19 @@ h1 {
 }
 
 #resultado-container {
-    margin-top: 30px;
-    width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 30px;
+    width: 100%;
 }
 
 #res {
+    background: #f8eaff;
+    border-radius: 10px;
+    font-size: 18px;
+    min-height: 40px;
     width: 80%;
     max-width: 700px;
     padding: 20px;
-    background: #f2f2f2;
-    border-radius: 10px;
     text-align: center;
-    font-size: 18px;
-    min-height: 40px;
 }
