@@ -178,7 +178,6 @@ function mostrarResultado(accion) {
     let texto = document.getElementById("texto").value;
     let resDiv = document.getElementById("res");
     let resultado = "";
-
     switch (accion) {
         case "palabras": resultado = "Total palabras: " + contarPalabras(texto); break;
         case "signos": resultado = "Signos de puntuación: " + contarSignos(texto); break;
@@ -193,7 +192,6 @@ function mostrarResultado(accion) {
         case "pares": resultado = "Posiciones pares: " + contarPares(texto); break;
         case "impares": resultado = "Posiciones impares: " + contarImpares(texto); break;
     }
-
     resDiv.innerHTML = resultado;
 }
 
@@ -201,13 +199,11 @@ function buscarPalabraUsuario() {
     let texto = document.getElementById("texto").value;
     let buscar = prompt("Ingresa la palabra:");
     if (!buscar) return;
-
     let encontrado = buscarPalabra(texto, buscar);
     document.getElementById("res").innerHTML =
         encontrado ? `La palabra "${buscar}" está en el texto.` :
                      `La palabra "${buscar}" NO está en el texto.`;
 }
-
 function contarCaracterUsuario() {
     let texto = document.getElementById("texto").value;
     let char = prompt("Ingresa un carácter:");
@@ -215,17 +211,14 @@ function contarCaracterUsuario() {
         alert("Debes ingresar 1 solo carácter.");
         return;
     }
-
     let cantidad = contarCaracter(texto, char);
     document.getElementById("res").innerHTML =
         `El carácter "${char}" aparece ${cantidad} veces.`;
 }
-
 function agregarTextoUsuario() {
     let texto = document.getElementById("texto").value;
     let frag = prompt("Texto a agregar:");
     if (!frag) return;
-
     let res = agregarTexto(texto, frag);
     document.getElementById("res").innerHTML =
         `<b>Al inicio:</b> ${res.inicio}<br><br><b>Al final:</b> ${res.final}`;
