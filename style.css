@@ -1,8 +1,9 @@
 * {
+    box-sizing: border-box;
+    font-family: "Poppins", Arial, sans-serif; /* Fuente de letra */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", Arial, sans-serif;
+    user-select: none; /* Bloquea la selección de texto */
 }
 
 body {
@@ -11,18 +12,18 @@ body {
 }
 
 .container {
-    max-width: 900px;
-    background: white;
-    margin: auto;
-    padding: 25px;
-    border-radius: 12px;
+    background: white; /* Color de fondo del contenedor principal */
+    border-radius: 12px; /* Bordes redondos del contenedor principal */
     box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    margin: auto;
+    max-width: 900px;
+    padding: 25px;
 }
 
 h1 {
+    color: #7a2f8f; /* Color de texto del encabezado */
     text-align: center;
     margin-bottom: 20px;
-    color: #7a2f8f;
 }
 
 #texto {
@@ -36,11 +37,6 @@ h1 {
     resize: vertical;
 }
 
-#texto:focus {
-    border-color: #a46bee;
-    background: #faf5ff;
-}
-
 .buttons {
     margin-top: 18px;
     display: grid;
@@ -49,7 +45,7 @@ h1 {
 }
 
 .buttons button {
-    background: #a46bee;
+    background: #a46bee; /* Color de los botones */
     color: white;
     border: none;
     padding: 10px;
@@ -70,12 +66,9 @@ h1 {
     width: 80%;
     max-width: 700px;
     padding: 20px;
-    background: white;              /* Fondo blanco visible */
-    border: 2px solid #d6b3ff;      /* Borde visible */
+    background: #f2f2f2;
     border-radius: 10px;
     text-align: center;
     font-size: 18px;
-    min-height: 60px;               /* Altura mínima para que SIEMPRE se vea el cuadro */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra bonita */
+    min-height: 40px;
 }
-
